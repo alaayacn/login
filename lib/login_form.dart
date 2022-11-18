@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import './login_input.dart';
 import './buttons/text_button.dart';
 import './buttons/login_button.dart';
+import './divider.dart';
 
 class LoginForm extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -26,6 +27,7 @@ class LoginForm extends StatelessWidget {
               ),
               const ForgetPasswordButton('Forget Password?'),
               const LoginButton('Login'),
+              const OrDivider(),
             ],
           )),
     );
