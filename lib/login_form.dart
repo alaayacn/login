@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import './login_input.dart';
+import './buttons/text_button.dart';
+import './buttons/login_button.dart';
 
 class LoginForm extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -17,7 +19,13 @@ class LoginForm extends StatelessWidget {
           child: Column(
             children: [
               LoginInput(inputText: "Email ID", iconName: 0xe081),
-              LoginInput(inputText: 'Password', iconName: 0xf0343, suffixIconName: 0xf4a0,),
+              LoginInput(
+                inputText: 'Password',
+                iconName: 0xf0343,
+                suffixIconName: 0xf4a0,
+              ),
+              const ForgetPasswordButton('Forget Password?'),
+              const LoginButton('Login'),
             ],
           )),
     );
