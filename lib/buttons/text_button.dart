@@ -7,7 +7,7 @@ class ForgetPasswordButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      // width: double.infinity,
       child: TextButton(
         onPressed: () {},
         child: Text(_textButtonText),

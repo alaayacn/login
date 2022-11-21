@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 
 class LoginInput extends StatelessWidget {
   final String inputText;
-  int iconName = 0;
+  int iconName;
   final int suffixIconName;
+  final String errorMessage;
   LoginInput({
-    @required this.inputText = '',
-    @required this.iconName = 0,
+    Key? key,
+    required this.inputText,
+    required this.iconName,
+    required this.errorMessage,
     this.suffixIconName = 0,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +29,9 @@ class LoginInput extends StatelessWidget {
               suffixIconName,
               fontFamily: 'MaterialIcons',
             )),
+            // errorText: errorMessage,
           ),
-        )
+        ),
       ],
     );
   }
